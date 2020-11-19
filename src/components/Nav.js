@@ -2,6 +2,8 @@ import {useState} from 'react';
 import {searchWeather} from '../redux/actions/weatherAction';
 import {useDispatch} from 'react-redux';
 import styled from 'styled-components';
+import {motion} from 'framer-motion';
+import {fade} from '../animation';
 
 function Nav(){
 
@@ -20,7 +22,7 @@ function Nav(){
 	}
 
 	return(
-		<Navbar>
+		<Navbar variants={fade} initial='hidden' animate='show'>
 			<h1>What's My Weather?</h1>
 			<form>
 				<input type="text" onChange={inputHandler} value={searchInput} placeholder="&quot;Los Angeles&quot;" required></input>
@@ -30,7 +32,7 @@ function Nav(){
 	)
 }
 
-const Navbar = styled.div`
+const Navbar = styled(motion.div)`
 	text-align: center;
 	padding: 1rem 0rem;
 	margin-top: 2rem;

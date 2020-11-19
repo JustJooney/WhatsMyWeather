@@ -13,6 +13,15 @@ const GlobalStyles = createGlobalStyle`
 		width: 100%;
 		color: #333;
 	}
+
+	#github{
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 2rem 3rem;
+		cursor: pointer;
+		color: #333;
+	}
 `
 
 export default GlobalStyles;
