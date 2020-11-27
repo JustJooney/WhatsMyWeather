@@ -26,7 +26,7 @@ function Weather(){
 					</div>
 					<div>
 						<h3>Feels Like:  {`${kelvinToFahrenheit(weather.main.feels_like)}`}</h3>
-						<h3>Huminity:  {`${weather.main.humidity}%`}</h3>
+						<h3>Humidity:  {`${weather.main.humidity}%`}</h3>
 						<h3>Sunrise:  {utcToDate(weather.sys.sunrise)}</h3>
 						<h3>Sunset: {utcToDate(weather.sys.sunset)}</h3>
 					</div>
